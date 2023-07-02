@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="estilos.css">
-<title>Registro en el Curso de Ciencias Naturales</title>
+<title>Registro en el Curso de Química y Biología</title>
 </head>
 <body>
  <form>
@@ -19,16 +19,16 @@
   </form>
    <%
    
-   String nombreC = request.getParameter("nombreC");
-   String cedulaC = request.getParameter("cedulaC");
-   String fechainicioC = request.getParameter("fechainicioC");
+   String nombreQ = request.getParameter("nombreQ");
+   String cedulaQ = request.getParameter("cedulaQ");
+   String fechainicioQ = request.getParameter("fechainicioQ");
     
    
         
         Class.forName("com.mysql.jdbc.Driver");
         Connection dbconect = DriverManager.getConnection("jdbc:mysql://localhost:3306/solociencia","root","");
         Statement dbstatement = dbconect.createStatement();
-        String insertarsql = "INSERT INTO registrociencia (nombreC,cedulaC,fechainicioC) VALUES ('"+nombreC+"','"+cedulaC+"','"+fechainicioC+"')";
+        String insertarsql = "INSERT INTO registroquimica (nombreQ,cedulaQ,fechainicioQ) VALUES ('"+nombreQ+"','"+cedulaQ+"','"+fechainicioQ+"')";
         dbstatement.executeUpdate(insertarsql);
         out.print("Registro realizado");
          %>
