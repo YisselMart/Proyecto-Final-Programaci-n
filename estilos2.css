@@ -1,0 +1,99 @@
+/* Tipos de letras usados para body y  los títulos */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+body {
+    background-color: #26ade4; 
+    font-family: 'Signika', sans-serif;
+    margin: 0%;
+  }
+header {
+    text-align: center; 
+    background-image: url('banner.jpg');
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  /* Coloca el banner en el fondo del header*/
+  header img {
+    display: block; 
+    margin: 0 auto; 
+  }
+  /* Estiliza el h1 del header*/
+  header h1 {
+    margin-top: 10px; 
+    font-size: 60;
+  }
+  
+  div{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+    }
+ 
+    
+
+table{
+    border-collapse: collapse; 
+    margin-left: auto; 
+    margin-right: auto;
+    }
+  
+  td{
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    }
+   a{
+    color: #000000;
+    text-decoration: none;
+    padding-top: 10px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+   }
+   .td:hover{
+    background-color: #031FA2;
+    color: white;
+    }
+    .tdblanco{
+    visibility: hidden;
+    border: none ;
+    }
+
+    .tdmorado{
+        background-color: mediumorchid ;
+        }
+    .tdceleste{
+        background-color: aqua ;
+        }
+    .tdrosado{
+        background-color:pink ;
+        }
+    .tdcrema{
+        background-color: #FFB266 ;
+        }
+    .tdamarillo{
+        background-color: yellow ;
+        }
+    .tdcremaoscuro2{
+        background-color: rgb(207, 127, 48) ;
+        }
+    .tdcremaoscuro{
+        background-color: #ff8000;
+        }
+    .tdgris{
+        background-color: silver;
+        }
+    .tdverde{
+        background-color:  greenyellow;
+        }
