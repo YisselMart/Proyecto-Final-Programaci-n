@@ -5,35 +5,36 @@
 <html>
 <head>
     <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="estilo.css">
-<title>Registro en el Curso de Programación</title>
+<link rel="stylesheet" type="text/css" href="jsp.css">
+<title>Registro de Usuario</title>
 </head>
 <body>
  <form>
   
   
-  <div class="contenedor">
+ <div class="contenedor">
   <div class="registrosjsp">
     <h1>¡Registro exitoso!</h1>
     <p>Los datos fueron insertados correctamente.</p>
-    <a href="Home.html">Página de Inicio</a>
+    <a href="Pagina-1.html">Inicia tu Sesión</a>
   </div>
 </div>
   </form>
    <%
    
-   String nombreP = request.getParameter("nombreP");
-   String cedulaP = request.getParameter("cedulaP");
-   String fechainicioP = request.getParameter("fechainicioP");
+   String nombre = request.getParameter("nombre");
+   String apellido = request.getParameter("apellido");
+   String edad = request.getParameter("edad");
+   String clave = request.getParameter("clave");
     
    
         
         Class.forName("com.mysql.jdbc.Driver");
         Connection dbconect = DriverManager.getConnection("jdbc:mysql://localhost:3306/solociencia","root","");
         Statement dbstatement = dbconect.createStatement();
-        String insertarsql = "INSERT INTO registroprogramacion (nombreP,cedulaP,fechainicioP) VALUES ('"+nombreP+"','"+cedulaP+"','"+fechainicioP+"')";
+        String insertarsql = "INSERT INTO registrousuario (nombre,apellido,edad,clave) VALUES ('"+nombre+"','"+apellido+"','"+edad+"','"+clave+"')";
         dbstatement.executeUpdate(insertarsql);
-        
+        out.print("Registro realizado");
          %>
 </body>
 </html>

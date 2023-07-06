@@ -4,21 +4,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="jsp.css">
+    <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="estilos.css">
 <title>Registro en el Curso de Ciencias Naturales</title>
 </head>
 <body>
  <form>
   
-  <div class="contenedor">
-  <div class="registrosjsp">
-    <h1>¡Registro exitoso!</h1>
-    <p>Los datos fueron insertados correctamente.</p>
-    <a href="Home.html">Página de Inicio</a>
-  </div>
-</div>
   
+  <h1>ï¿½Registro exitoso!</h1>
+  <p>Los datos fueron insertados correctamente.</p>
+
+  <a href="">Pagina de Inicio</a>
   </form>
    <%
    
@@ -33,7 +30,7 @@
         Statement dbstatement = dbconect.createStatement();
         String insertarsql = "INSERT INTO registrociencia (nombreC,cedulaC,fechainicioC) VALUES ('"+nombreC+"','"+cedulaC+"','"+fechainicioC+"')";
         dbstatement.executeUpdate(insertarsql);
-        
+        out.print("Registro realizado");
          %>
 </body>
 </html>
